@@ -90,7 +90,7 @@ npm run dev
 npm run typecheck
 ```
 
-Requires Node.js ≥ 18 and npm ≥ 9.
+Requires Node.js ≥ 20 and npm ≥ 9.
 
 ---
 

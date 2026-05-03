@@ -408,8 +408,20 @@ export class CardModUI extends LitElement {
     this._targetElement = config.target_element ?? "ha-card";
   }
 
+  static getConfigElement(): HTMLElement {
+    return document.createElement("card-mod-ui-editor");
+  }
+
+  static getStubConfig(): CardModUIConfig {
+    return {
+      type: "custom:card-mod-ui",
+      styles: {},
+    };
+  }
+
   getCardSize(): number {
-    return 8;
+    // Card renders roughly 650 px; HA masonry uses ~50 px per unit.
+    return 13;
   }
 
   private _handleGroupClick(groupId: string): void {
@@ -434,7 +446,8 @@ export class CardModUI extends LitElement {
   }
 
   private _handleTargetChange(e: Event): void {
-    this._targetElement = (e.target as HTMLInputElement).value;
+    const raw = (e.target as HTMLInputElement).value.trim();
+    this._targetElement = raw || "ha-card";
     this._fireConfigChanged();
   }
 

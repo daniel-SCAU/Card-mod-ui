@@ -20,7 +20,7 @@ import "./editor.js";
     documentationURL: string;
   }>
 ).push({
-  type: "card-mod-ui",
+  type: "custom:card-mod-ui",
   name: "Card Mod UI",
   description:
     "Visual CSS configuration editor for lovelace-card-mod. " +
