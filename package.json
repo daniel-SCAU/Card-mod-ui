@@ -1,0 +1,30 @@
+{
+  "name": "card-mod-ui",
+  "version": "1.0.0",
+  "description": "Visual configuration UI for lovelace-card-mod",
+  "keywords": [
+    "home-assistant",
+    "lovelace",
+    "card-mod",
+    "hacs",
+    "css"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "dev": "rollup -c rollup.config.js --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.9.4",
+    "@rollup/plugin-terser": "^1.0.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "lit": "^3.1.2"
+  }
+}
